@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Dr. Meenalosini Vimal Cruz">
+  <title>Gallery | Dr. Meenalosini Vimal Cruz</title>
+  <link rel="stylesheet" href="../css/styles-template.css">
+  <link rel="stylesheet" href="../modal.css">
+  <style>
+    .photo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .photo-column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+    .photo-column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    @media screen and (max-width: 800px) {
+      .photo-column { flex: 50%; max-width: 50%; }
+    }
+    @media screen and (max-width: 600px) {
+      .photo-column { flex: 100%; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dr. Meenalosini Vimal Cruz</h1>
+    <p>AI Research | Machine Learning | Brain-Computer Interfaces</p>
+  </header>
+
+  <nav>
+    <div>
+      <a href="../index.html">Home</a>
+
+      <a href="../Teaching/Teaching.html">Teaching</a>
+
+      <div class="nav-item">
+        <a href="../Research/AI%20Projects.html">Research</a>
+        <div class="nav-dropdown">
+          <a href="../Research/AI%20Projects.html">Projects &amp; Grants</a>
+          <a href="../Research/Publications.html">Publications</a>
+          <a href="../Research/Talks%20and%20Workshops.html">Talks and Workshops</a>
+          <a href="../Research/researchteam.html">My Research Team</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a href="../Services/Institution.html">Services</a>
+        <div class="nav-dropdown">
+          <a href="../Services/Institution.html">Institution</a>
+          <a href="../Services/Community.html">STEM Outreach &amp; Community</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a href="gallery.html" class="active">News &amp; Gallery</a>
+        <div class="nav-dropdown">
+          <a href="news.html">News</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+      </div>
+
+      <a href="../Contact%20Me.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="card">
+      <h2>Gallery</h2>
+
+      <div class="photo-row">
+        <div class="photo-column">
+          <img id="myImg" src="photos/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)">
+          <img id="myImg" src="photos/2.jpg" style="width:100%" onclick="openModal();currentSlide(2)">
+          <img id="myImg" src="photos/3.jpg" style="width:100%" onclick="openModal();currentSlide(3)">
+          <img id="myImg" src="photos/4.jpg" style="width:100%" onclick="openModal();currentSlide(4)">
+          <img id="myImg" src="photos/5.jpg" style="width:100%" onclick="openModal();currentSlide(5)">
+          <img id="myImg" src="photos/6.jpg" style="width:100%" onclick="openModal();currentSlide(6)">
+          <img id="myImg" src="photos/7.jpg" style="width:100%" onclick="openModal();currentSlide(7)">
+          <img id="myImg" src="photos/8.jpg" style="width:100%" onclick="openModal();currentSlide(8)">
+          <img id="myImg" src="photos/45.jpg" style="width:100%" onclick="openModal();currentSlide(46)">
+          <img id="myImg" src="photos/45a.png" style="width:100%" onclick="openModal();currentSlide(47)">
+          <img id="myImg" src="photos/46.jpg" style="width:100%" onclick="openModal();currentSlide(48)">
+          <img id="myImg" src="photos/47.jpg" style="width:100%" onclick="openModal();currentSlide(49)">
+          <img id="myImg" src="photos/43.jpg" style="width:100%" onclick="openModal();currentSlide(43)">
+          <img id="myImg" src="photos/owl.jpg" style="width:100%" onclick="openModal();currentSlide(58)">
+        </div>
+
+        <div class="photo-column">
+          <img id="myImg" src="photos/9.png" style="width:100%" onclick="openModal();currentSlide(9)">
+          <img id="myImg" src="photos/10.jpg" style="width:100%" onclick="openModal();currentSlide(10)">
+          <img id="myImg" src="photos/11.png" style="width:100%" onclick="openModal();currentSlide(11)">
+          <img id="myImg" src="photos/12.png" style="width:100%" onclick="openModal();currentSlide(12)">
+          <img id="myImg" src="photos/13.png" style="width:100%" onclick="openModal();currentSlide(13)">
+          <img id="myImg" src="photos/14.jpg" style="width:100%" onclick="openModal();currentSlide(14)">
+          <img id="myImg" src="photos/15.png" style="width:100%" onclick="openModal();currentSlide(15)">
+          <img id="myImg" src="photos/16.png" style="width:100%" onclick="openModal();currentSlide(16)">
+          <img id="myImg" src="photos/17.jpg" style="width:100%" onclick="openModal();currentSlide(17)">
+          <img id="myImg" src="photos/51.jpg" style="width:100%" onclick="openModal();currentSlide(51)">
+          <img id="myImg" src="photos/52.jpg" style="width:100%" onclick="openModal();currentSlide(52)">
+          <img id="myImg" src="photos/53.jpg" style="width:100%" onclick="openModal();currentSlide(53)">
+          <img id="myImg" src="photos/50.png" style="width:100%" onclick="openModal();currentSlide(50)">
+          <img id="myImg" src="photos/45.jpg" style="width:100%" onclick="openModal();currentSlide(54)">
+          <img id="myImg" src="photos/bcilab.jpg" style="width:100%" onclick="openModal();currentSlide(58)">
+        </div>
+
+        <div class="photo-column">
+          <img id="myImg" src="photos/18.jpg" style="width:100%" onclick="openModal();currentSlide(18)">
+          <img id="myImg" src="photos/18a.jpg" style="width:100%" onclick="openModal();currentSlide(19)">
+          <img id="myImg" src="photos/19.jpg" style="width:100%" onclick="openModal();currentSlide(20)">
+          <img id="myImg" src="photos/20.jpg" style="width:100%" onclick="openModal();currentSlide(21)">
+          <img id="myImg" src="photos/21.png" style="width:100%" onclick="openModal();currentSlide(22)">
+          <img id="myImg" src="photos/22.png" style="width:100%" onclick="openModal();currentSlide(23)">
+          <img id="myImg" src="photos/23.png" style="width:100%" onclick="openModal();currentSlide(24)">
+          <img id="myImg" src="photos/24.png" style="width:100%" onclick="openModal();currentSlide(25)">
+          <img id="myImg" src="photos/25.png" style="width:100%" onclick="openModal();currentSlide(26)">
+          <img id="myImg" src="photos/56.jpg" style="width:100%" onclick="openModal();currentSlide(41)">
+          <img id="myImg" src="photos/37.jpg" style="width:100%" onclick="openModal();currentSlide(37)">
+          <img id="myImg" src="photos/39.jpg" style="width:100%" onclick="openModal();currentSlide(39)">
+          <img id="myImg" src="photos/40.png" style="width:100%" onclick="openModal();currentSlide(40)">
+          <img id="myImg" src="photos/41.png" style="width:100%" onclick="openModal();currentSlide(41)">
+        </div>
+
+        <div class="photo-column">
+          <img id="myImg" src="photos/26.jpg" style="width:100%" onclick="openModal();currentSlide(27)">
+          <img id="myImg" src="photos/27.png" style="width:100%" onclick="openModal();currentSlide(28)">
+          <img id="myImg" src="photos/28.jpg" style="width:100%" onclick="openModal();currentSlide(29)">
+          <img id="myImg" src="photos/29.jpg" style="width:100%" onclick="openModal();currentSlide(30)">
+          <img id="myImg" src="photos/30.jpg" style="width:100%" onclick="openModal();currentSlide(31)">
+          <img id="myImg" src="photos/31.jpg" style="width:100%" onclick="openModal();currentSlide(32)">
+          <img id="myImg" src="photos/32.jpg" style="width:100%" onclick="openModal();currentSlide(33)">
+          <img id="myImg" src="photos/33.jpg" style="width:100%" onclick="openModal();currentSlide(34)">
+          <img id="myImg" src="photos/34.jpg" style="width:100%" onclick="openModal();currentSlide(35)">
+          <img id="myImg" src="photos/36.jpg" style="width:100%" onclick="openModal();currentSlide(36)">
+          <img id="myImg" src="photos/38.jpg" style="width:100%" onclick="openModal();currentSlide(38)">
+          <img id="myImg" src="photos/42.png" style="width:100%" onclick="openModal();currentSlide(42)">
+          <img id="myImg" src="photos/54.png" style="width:100%" onclick="openModal();currentSlide(42)">
+          <img id="myImg" src="photos/55.png" style="width:100%" onclick="openModal();currentSlide(42)">
+          <img id="myImg" src="photos/chatbot.png" style="width:100%" onclick="openModal();currentSlide(57)">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides"><img src="photos/1.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/2.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/3.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/4.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/5.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/6.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/7.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/8.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/9.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/10.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/11.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/12.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/13.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/14.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/15.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/16.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/17.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/18.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/19.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/20.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/21.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/22.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/23.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/24.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/25.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/26.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/27.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/28.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/29.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/30.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/31.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/32.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/33.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/34.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/18a.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/18a.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/35.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/36.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/37.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/38.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/39.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/40.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/41.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/42.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/43.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/44.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/45.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/45a.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/46.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/47.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/50.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/51.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/52.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/53.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/54.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/55.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/chatbot.png" style="width:100%"></div>
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Copyright &copy; 2026 | Meenalosini Vimal Cruz</p>
+  </footer>
+
+  <script src="../modal.js"></script>
+</body>
+</html>

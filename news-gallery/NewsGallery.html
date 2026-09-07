@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Dr. Meenalosini Vimal Cruz">
+  <title>Gallery | Dr. Meenalosini Vimal Cruz</title>
+  <link rel="stylesheet" href="../css/styles-template.css">
+  <link rel="stylesheet" href="../modal.css">
+  <style>
+    .gallery-masonry {
+      column-count: 3;
+      column-gap: 14px;
+    }
+    @media (max-width: 1000px) {
+      .gallery-masonry { column-count: 2; }
+    }
+    @media (max-width: 640px) {
+      .gallery-masonry { column-count: 1; }
+    }
+    .masonry-item {
+      position: relative;
+      break-inside: avoid;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+    }
+    .masonry-item img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+    .masonry-item:hover img {
+      transform: scale(1.02);
+    }
+    .masonry-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.85rem;
+      background: linear-gradient(to top, rgba(22,40,61,0.72) 0%, rgba(22,40,61,0) 55%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .masonry-item:hover .masonry-overlay {
+      opacity: 1;
+    }
+    .masonry-overlay span {
+      color: white;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dr. Meenalosini Vimal Cruz</h1>
+    <p>Assistant Professor, School of Computing | Founder &amp; Director, SAIL Lab | Georgia Southern University</p>
+  </header>
+
+  <nav>
+    <div>
+      <a href="../index.html">Home</a>
+      <a href="../Teaching/Teaching.html">Teaching</a>
+      <a href="../Research/Research.html">Research</a>
+      <a href="../Research/Publications.html">Publications</a>
+      <a href="../Services/Services.html">Services</a>
+      <a href="NewsGallery.html" class="active">Gallery</a>
+      <a href="../Contact%20Me.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="card">
+      <h2>Gallery</h2>
+
+      <div class="gallery-masonry">
+        <div class="masonry-item" onclick="openModal();currentSlide(1)"><img src="photos/1.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(2)"><img src="photos/2.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(3)"><img src="photos/3.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(4)"><img src="photos/4.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(5)"><img src="photos/5.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(6)"><img src="photos/6.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(7)"><img src="photos/7.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(8)"><img src="photos/8.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(46)"><img src="photos/45.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(47)"><img src="photos/45a.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(48)"><img src="photos/46.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(49)"><img src="photos/47.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(43)"><img src="photos/43.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(58)"><img src="photos/owl.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+
+        <div class="masonry-item" onclick="openModal();currentSlide(9)"><img src="photos/9.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(10)"><img src="photos/10.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(11)"><img src="photos/11.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(12)"><img src="photos/12.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(13)"><img src="photos/13.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(14)"><img src="photos/14.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(15)"><img src="photos/15.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(16)"><img src="photos/16.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(17)"><img src="photos/17.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(51)"><img src="photos/51.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(52)"><img src="photos/52.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(53)"><img src="photos/53.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(50)"><img src="photos/50.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(54)"><img src="photos/45.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(58)"><img src="photos/bcilab.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+
+        <div class="masonry-item" onclick="openModal();currentSlide(18)"><img src="photos/18.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(19)"><img src="photos/18a.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(20)"><img src="photos/19.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(21)"><img src="photos/20.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(22)"><img src="photos/21.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(23)"><img src="photos/22.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(24)"><img src="photos/23.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(25)"><img src="photos/24.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(26)"><img src="photos/25.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(41)"><img src="photos/56.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(37)"><img src="photos/37.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(39)"><img src="photos/39.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(40)"><img src="photos/40.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(41)"><img src="photos/41.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+
+        <div class="masonry-item" onclick="openModal();currentSlide(27)"><img src="photos/26.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(28)"><img src="photos/27.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(29)"><img src="photos/28.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(30)"><img src="photos/29.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(31)"><img src="photos/30.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(32)"><img src="photos/31.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(33)"><img src="photos/32.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(34)"><img src="photos/33.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(35)"><img src="photos/34.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(36)"><img src="photos/36.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(38)"><img src="photos/38.jpg" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(42)"><img src="photos/42.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(42)"><img src="photos/54.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(42)"><img src="photos/55.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+        <div class="masonry-item" onclick="openModal();currentSlide(57)"><img src="photos/chatbot.png" alt="Gallery photo"><div class="masonry-overlay"><span>View Photo</span></div></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides"><img src="photos/1.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/2.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/3.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/4.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/5.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/6.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/7.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/8.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/9.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/10.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/11.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/12.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/13.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/14.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/15.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/16.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/17.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/18.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/19.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/20.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/21.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/22.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/23.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/24.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/25.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/26.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/27.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/28.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/29.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/30.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/31.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/32.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/33.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/34.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/18a.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/18a.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/35.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/36.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/37.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/38.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/39.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/40.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/41.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/42.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/43.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/44.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/45.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/45a.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/46.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/47.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/50.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/51.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/52.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/53.jpg" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/54.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/55.png" style="width:100%"></div>
+      <div class="mySlides"><img src="photos/chatbot.png" style="width:100%"></div>
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Copyright &copy; 2026 | Meenalosini Vimal Cruz</p>
+  </footer>
+
+  <script src="../modal.js"></script>
+</body>
+</html>

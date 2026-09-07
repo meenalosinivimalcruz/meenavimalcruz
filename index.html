@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal website for academics">
+  <meta name="keywords" content="Meenalosini,meena,vimal cruz">
+  <meta name="author" content="Dr. Meenalosini Vimal Cruz">
+  <link rel="stylesheet" href="css/styles-template.css">
+  <title>Home | Dr. Meenalosini Vimal Cruz</title>
+
+  <style>
+    .profile-about {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2rem;
+    }
+    .profile-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, #b8cfe0 0%, #8fb3d1 100%);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .profile-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+    .profile-name { font-size: 17px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 0.5rem; }
+    .quick-links-heading { font-size: 12px; text-transform: uppercase; font-weight: 600; color: var(--color-text-secondary); margin-top: 1.25rem; letter-spacing: 0.5px; }
+    .quick-links { list-style: none; padding: 0; margin-top: 0.75rem; }
+    .quick-links li { margin-bottom: 0.6rem; }
+    .quick-links a { font-size: 13px; color: var(--color-accent); font-weight: 500; }
+    .about-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+    .info-box-label { font-size: 12px; text-transform: uppercase; font-weight: 600; color: var(--color-text-secondary); margin-bottom: 0.4rem; }
+    .info-box-content { font-size: 13px; color: var(--color-text-tertiary); }
+
+    @media (max-width: 768px) {
+      .profile-about { grid-template-columns: 1fr; }
+      .about-info-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Recent News */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+    }
+    .news-card {
+      background: white;
+      border: 1px solid var(--color-border-soft);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+    }
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .news-card-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+    }
+    .news-card-body {
+      padding: 1.25rem 1.4rem;
+    }
+    .news-card-date {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-accent-dark);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .news-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+    .news-card-desc {
+      font-size: 13px;
+      color: var(--color-text-tertiary);
+      line-height: 1.6;
+      margin: 0;
+      max-width: none;
+    }
+
+    /* Lightbox */
+    #lightbox { display: none; position: fixed; inset: 0; z-index: 100; align-items: center; justify-content: center; padding: 1rem; background: rgba(0,0,0,0.9); }
+    #lightbox.open { display: flex; }
+    #lightbox img { max-height: 80vh; width: auto; border-radius: 8px; }
+    #lightboxCaption { color: white; font-size: 13px; margin-top: 1rem; text-align: center; }
+    #lightboxClose { position: absolute; top: 20px; right: 28px; color: white; font-size: 2.5rem; font-weight: bold; cursor: pointer; background: none; border: none; }
+    #lightboxClose:hover { color: var(--color-accent); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dr. Meenalosini Vimal Cruz</h1>
+    <p>Assistant Professor, School of Computing | Founder &amp; Director, SAIL Lab | Georgia Southern University</p>
+  </header>
+
+  <nav>
+    <div>
+      <a href="index.html" class="active">Home</a>
+      <a href="Teaching/Teaching.html">Teaching</a>
+      <a href="Research/Research.html">Research</a>
+      <a href="Research/Publications.html">Publications</a>
+      <a href="Services/Services.html">Services</a>
+      <a href="news-gallery/NewsGallery.html">Gallery</a>
+      <a href="Contact%20Me.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- PROFILE + ABOUT -->
+    <div class="card">
+      <div class="profile-about">
+        <div>
+          <div class="profile-image">
+            <img src="image/DP.jpg" alt="Dr. Meenalosini Vimal Cruz" class="lightbox-trigger" data-caption="Dr. Meenalosini Vimal Cruz">
+          </div>
+          <div class="profile-name">Dr. Meenalosini Vimal Cruz</div>
+
+          <div class="quick-links-heading">Quick Links</div>
+          <ul class="quick-links">
+            <li><a href="Teaching/Teaching.html">&rarr; Teaching</a></li>
+            <li><a href="Research/Publications.html">&rarr; Publications</a></li>
+            <li><a href="Research/Research.html#team">&rarr; Research Team</a></li>
+            <li><a href="Contact%20Me.html">&rarr; Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>About Me</h2>
+          <p>
+            With 15 years of teaching and research experience in Computer Science, I love to learn and teach cutting edge techniques of Artificial Intelligence.
+            <br><br>
+            I completed my Ph.D. in Computer Science Engineering in 2014, received a Master of Technology degree in Computer and Information Technology with a <em>Gold Medal</em>, and also completed a Master of Science &amp; Master of Philosophy in Physics. My areas of specialization are Data Science, Machine Learning/Deep Learning, Computer Vision, and Brain-Computer Interfaces.
+            <br><br>
+            I have published more than 50 research papers in reputed international journals. As part of my Ph.D., I worked on designing a computer-aided diagnosis tool to automatically detect breast cancer cells in mammograms. I have also worked on developing deep learning algorithms to identify and classify skin cancer cells and analyze brain tissue on MRI images. I have mentored many research scholars in Artificial Intelligence and Brain-Computer Interface research projects. My current research focuses on Brain-Computer Interfaces to analyze EEG signals using machine learning techniques. My research projects are funded by many internal and external sources.
+            <br><br>
+            I am blessed to have a beautiful family with two adorable kids and a loving husband who are the reason behind my every success, and my parents who have been the boon throughout my career. My hobbies are cooking, painting, and yoga.
+            <br><br>
+            <em>Note — this website is coded by me completely from scratch to demonstrate web design techniques to my students.</em>
+          </p>
+
+          <div class="about-info-grid">
+            <div class="highlight-box" style="font-size:13px;">
+              <div class="info-box-label">Education</div>
+              <div class="info-box-content">Ph.D. (2014) Computer Science Engineering; M.Tech. Computer &amp; Information Technology (Gold Medal); M.Sc. &amp; M.Phil. Physics</div>
+            </div>
+            <div class="highlight-box" style="font-size:13px;">
+              <div class="info-box-label">Impact</div>
+              <div class="info-box-content">50+ publications in reputed international journals; internally and externally funded research projects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECENT NEWS -->
+    <div style="margin-top: 3rem;">
+      <h2>Recent News</h2>
+      <div class="news-grid">
+
+        <div class="news-card lightbox-trigger" data-caption="SCALE Innovation Forum — Live Demonstration, August 26, 2026" data-src="Recent%20news/Scale%20innovation%20forum%20live%20demonstration.jpeg">
+          <img src="Recent%20news/Scale%20innovation%20forum%20live%20demonstration.jpeg" alt="SCALE Innovation Forum live demonstration" class="news-card-image">
+          <div class="news-card-body">
+            <div class="news-card-date">August 26, 2026</div>
+            <div class="news-card-title">SCALE Innovation Forum: Live Robotics Demonstration</div>
+            <p class="news-card-desc">SAIL Lab presented a live autonomous mobile robot + computer vision demonstration for automated warehouse pallet inspection at the Supply Chain and Logistics Innovation Forum, ROWS Lab.</p>
+          </div>
+        </div>
+
+        <div class="news-card lightbox-trigger" data-caption="Guest Lecture — Dr. Sibi Chakkaravarthy Sethuraman, September 9, 2026" data-src="Recent%20news/Guest_Lecture-Sibi.png">
+          <img src="Recent%20news/Guest_Lecture-Sibi.png" alt="Guest Lecture by Dr. Sibi Chakkaravarthy Sethuraman" class="news-card-image">
+          <div class="news-card-body">
+            <div class="news-card-date">September 9, 2026</div>
+            <div class="news-card-title">Guest Lecture: Dr. Sibi Chakkaravarthy Sethuraman</div>
+            <p class="news-card-desc">"Computer Vision – Application and Research Perspectives" — CSCI-7090 Advanced Computer Vision and Deep Learning.</p>
+          </div>
+        </div>
+
+        <div class="news-card lightbox-trigger" data-caption="Guest Lecture — Dr. Karthikeyan Saminathan, October 14, 2026" data-src="Recent%20news/Guest_lecture-karthik.png">
+          <img src="Recent%20news/Guest_lecture-karthik.png" alt="Guest Lecture by Dr. Karthikeyan Saminathan" class="news-card-image">
+          <div class="news-card-body">
+            <div class="news-card-date">October 14, 2026</div>
+            <div class="news-card-title">Guest Lecture: Dr. Karthikeyan Saminathan</div>
+            <p class="news-card-desc">"Vision AI Based Industrial Safety &amp; Compliance Intelligence" — CSCI-7090 Advanced Computer Vision and Deep Learning.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2026 | Meenalosini Vimal Cruz</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <button id="lightboxClose" aria-label="Close">&times;</button>
+    <div style="max-width: 900px; width: 100%; display:flex; flex-direction:column; align-items:center;">
+      <img id="lightboxImg" src="" alt="">
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script>
+    // Lightbox
+    (function () {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightboxImg');
+      var lightboxCaption = document.getElementById('lightboxCaption');
+
+      function openLightbox(src, caption) {
+        lightboxImg.src = src;
+        lightboxImg.alt = caption || '';
+        lightboxCaption.textContent = caption || '';
+        lightbox.classList.add('open');
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightboxImg.src = '';
+      }
+
+      document.querySelectorAll('.lightbox-trigger').forEach(function (el) {
+        el.addEventListener('click', function () {
+          var src = el.getAttribute('data-src') || el.getAttribute('src');
+          openLightbox(src, el.getAttribute('data-caption'));
+        });
+      });
+
+      document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+</body>
+</html>
